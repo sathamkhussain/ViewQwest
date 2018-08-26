@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Rq-tJ-sKB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Qwest-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewQwest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-QJ-gVE" customClass="VQwestCollectionView" customModule="ViewQwest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k6A-zN-gJd">
+                                    <size key="itemSize" width="180" height="200"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="vQuestCell" id="XzK-yY-Tzp" customClass="VQwestCell" customModule="ViewQwest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="180" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-kv-Jds">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.24000130059999999" green="0.66399580920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0vx-kv-Jds" secondAttribute="trailing" id="8Ry-QZ-86C"/>
+                                            <constraint firstAttribute="bottom" secondItem="0vx-kv-Jds" secondAttribute="bottom" id="OWt-1a-l5C"/>
+                                            <constraint firstItem="0vx-kv-Jds" firstAttribute="leading" secondItem="XzK-yY-Tzp" secondAttribute="leading" id="cvV-wn-rOt"/>
+                                            <constraint firstItem="0vx-kv-Jds" firstAttribute="top" secondItem="XzK-yY-Tzp" secondAttribute="top" id="vob-Ud-nTU"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="itemImgView" destination="0vx-kv-Jds" id="prs-Y6-DsW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="vQuestHeaderCell" id="NAq-4k-uIu" customClass="VQwestSectionHeader" customModule="ViewQwest" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="6fg-AM-qDn">
+                                            <rect key="frame" x="16" y="9" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="vcN-xr-G8X"/>
+                                                <constraint firstAttribute="width" constant="32" id="ySB-Ff-S0q"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3V-c2-Ly5">
+                                            <rect key="frame" x="71" y="15" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6fg-AM-qDn" firstAttribute="leading" secondItem="NAq-4k-uIu" secondAttribute="leading" constant="16" id="KFS-kD-0Xv"/>
+                                        <constraint firstItem="G3V-c2-Ly5" firstAttribute="top" secondItem="NAq-4k-uIu" secondAttribute="topMargin" constant="7" id="SuV-iP-eYQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="6fg-AM-qDn" secondAttribute="bottom" constant="9" id="ZVI-Im-Thd"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="G3V-c2-Ly5" secondAttribute="bottom" constant="6" id="o00-vG-WV7"/>
+                                        <constraint firstItem="6fg-AM-qDn" firstAttribute="top" secondItem="NAq-4k-uIu" secondAttribute="top" constant="9" id="uam-vF-h1f"/>
+                                        <constraint firstItem="G3V-c2-Ly5" firstAttribute="leading" secondItem="6fg-AM-qDn" secondAttribute="trailing" constant="23" id="vV1-XE-e9e"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="userImgView" destination="6fg-AM-qDn" id="INQ-x0-rsc"/>
+                                        <outlet property="userNameLbl" destination="G3V-c2-Ly5" id="TFT-uk-wOF"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ab3-Q7-IEs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qYH-O9-aCB"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JDP-QJ-gVE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FmZ-f6-XJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JDP-QJ-gVE" secondAttribute="bottom" id="Ohr-dF-ioh"/>
+                            <constraint firstItem="JDP-QJ-gVE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WGp-B5-VVS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JDP-QJ-gVE" secondAttribute="trailing" id="ZYp-F0-yhG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="View Qwest" id="cQ0-Z0-Cj2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fSC-Lo-ZCH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Rq-tJ-sKB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lv3-Id-yPY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a11-3W-e6R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myL-RS-Z1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="-579.76011994002999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholder" width="1065" height="800"/>
+    </resources>
+</document>

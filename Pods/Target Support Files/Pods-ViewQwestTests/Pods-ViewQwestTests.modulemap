@@ -1,0 +1,6 @@
+framework module Pods_ViewQwestTests {
+  umbrella header "Pods-ViewQwestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
